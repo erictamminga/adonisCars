@@ -30,4 +30,14 @@ Factory.blueprint('App/Models/User', async (faker) => {
         password: await Hash.make(faker.password())
     }
 })
+Factory.blueprint('App/Models/Car', async (faker,index,data) => {
+    // var carArray = 
 
+    return {
+        make: data[index].make,
+        model: data[index].model,
+        color: data[index].color
+    }
+
+
+})
