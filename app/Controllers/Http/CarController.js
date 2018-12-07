@@ -26,7 +26,7 @@ class CarController {
         console.log(params.id)
         console.log('Hi matt')
         var newArray = carsArray.filter(element => element.id !== params.id);
-            response.send(newArray)
+        response.send(newArray)
     }
 
 }
