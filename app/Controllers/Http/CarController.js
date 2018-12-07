@@ -2,14 +2,17 @@
 
 const carsArray = [{ id: "0", make: 'Ford', model: 'Mustang', color: ' Blue' }]
 
+const Car =  use('App/Models/Car')
+
 class CarController {
     greeting({ request, response }) {
 
         response.send('Drive Vroom Vroom')
     }
-    displayCar({ request, response }) {
-        //Mike Rocks
-        response.send(carsArray)
+    async displayCar({ request, response }) {
+        
+        response.send(await Car.all())
+        
     }
     createCar({ request, response }) {
         //Still Rocks
